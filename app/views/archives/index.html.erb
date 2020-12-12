@@ -34,7 +34,7 @@
 				<%= link_to entry_path(entry) do %>
 					<div class="card mb-4 ">
 						<div class="card-content">
-							<strong><%= entry.meal_type %></strong><br/>
+							<strong><%= entry.meal_type %>: <%= entry.category.title if entry.category.present? %></strong><br/>
 							<%= entry.calories %>calories,
 							<%= entry.proteins %>g proteins,
 							<%= entry.carbohydrates %>g carbohydrates,
