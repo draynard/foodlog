@@ -9,7 +9,7 @@
   <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title"><%= entry.meal_type %></p>
+          <p class="card-header-title"><%= entry.meal_type %>: <%= entry.category.title if entry.category.present? %></p>
         </header>
         <div class="card-content">
           <div class="content">
@@ -30,3 +30,12 @@
 <% end %>
 </div>
 
+<div class="columns is-centered is-one-quarter">
+  <div class="m-4 mt-6">
+    <%= link_to "View all entries", archives_index_path, class: "button is-link is-outlined is-centered" %>
+  </div>
+
+  <div class="m-4 mt-6">
+    <%= link_to "Create new category", categories_new_path, class: "button is-link is-outlined is-centered" %>
+  </div>
+</div>
